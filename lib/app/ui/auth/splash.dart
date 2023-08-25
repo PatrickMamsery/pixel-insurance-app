@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pixel_insurance/main.dart';
+import 'package:pixel_insurance/app/ui/auth/login_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,9 +18,7 @@ class _SplashScreenState extends State<SplashScreen>
     Future.delayed(const Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (_) => const MyHomePage(
-            title: 'Rubea',
-          ),
+          builder: (_) => LoginPage(),
         ),
       );
     });
