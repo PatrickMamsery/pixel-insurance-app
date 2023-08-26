@@ -2,14 +2,11 @@ import "package:flutter/material.dart";
 import "package:get/get.dart";
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-import 'app/ui/auth/login_page.dart';
-import 'app/ui/home/home_page.dart';
+import 'app/ui/auth/OTP_Login.dart';
 
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences prefs = await SharedPreferences.getInstance();
 
   // var token = prefs.getString("token");
 
@@ -23,10 +20,10 @@ void main() async {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return GetMaterialApp(
+        return const GetMaterialApp(
           debugShowCheckedModeBanner: false,
           // home: token != null ? const HomePage() : const LoginPage(),
-          home: LoginPage(),
+          home: OTP_Login(),
         );
       },
     ),
