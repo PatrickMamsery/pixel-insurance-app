@@ -3,14 +3,12 @@ import "package:get/get.dart";
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:pixel_insurance/app/ui/auth/splash.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-import 'app/ui/auth/login_page.dart';
-import 'app/ui/home/home_page.dart';
+import 'app/ui/auth/OTP_Login.dart'; // used when dealing with OTP screen
+import 'app/ui/auth/widgets/forgot_password.dart';
 
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences prefs = await SharedPreferences.getInstance();
 
   // var token = prefs.getString("token");
 
@@ -27,7 +25,7 @@ void main() async {
         return const GetMaterialApp(
           debugShowCheckedModeBanner: false,
           // home: token != null ? const HomePage() : const LoginPage(),
-          home: SplashScreen(),
+          home: ForgotPassword(),
         );
       },
     ),
