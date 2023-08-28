@@ -191,8 +191,8 @@ class OTP_Login extends StatelessWidget {
           style: TextStyle(color: Colors.blue),
         ),
       ),
-      const Row(
-        children: [
+      Row(
+        children: const [
           Padding(
             padding: EdgeInsets.fromLTRB(90, 40, 0, 15),
             child: Text('I didnt receive any code?'),

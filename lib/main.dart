@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:pixel_insurance/app/ui/auth/splash.dart';
 
-import 'app/ui/auth/OTP_Login.dart'; // used when dealing with OTP screen
+import 'app/ui/auth/otp_login.dart'; // used when dealing with OTP screen
 import 'app/ui/auth/widgets/forgot_password.dart';
 
 void main() async {

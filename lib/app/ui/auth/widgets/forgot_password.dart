@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:pixel_insurance/app/ui/theme/app_constants.dart';
+// import 'package:flutter/services.dart';
+// import 'package:pixel_insurance/app/ui/theme/app_constants.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({super.key});
@@ -39,13 +39,17 @@ class ForgotPassword extends StatelessWidget {
               child: Image.asset('assets/images/forgot_password.png'),
             ),
           ),
-          const Center(
+          Center(
             heightFactor: 2,
             child: Column(
-              children: [
-                Text('Enter your phone number to receive'),
+              children: const [
+                Text(
+                  'Enter your phone number to receive',
+                ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 4),
+                  padding: EdgeInsets.symmetric(
+                    vertical: 4,
+                  ),
                   child: Text(
                     'Security Code',
                     textAlign: TextAlign.center,
@@ -135,26 +139,30 @@ class ForgotPassword extends StatelessWidget {
             ),
           ),
           SizedBox(
-              width: 230,
-              height: 50,
-              child: Container(
-                margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
+            width: 230,
+            height: 50,
+            child: Container(
+              margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 5),
+                  child: Text(
+                    'Send',
+                    style: TextStyle(
+                      fontSize: 16,
                     ),
-                    child: const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 5),
-                        child: Text('Send',
-                            style: TextStyle(
-                              fontSize: 16,
-                            )))),
-              ))
-          //flat
+                  ),
+                ),
+              ),
+            ),
+          ), //flat
         ],
       ),
     );
